@@ -3,7 +3,7 @@ import List from './List';
 import Filters from './Filters';
 import Summary from './Summary';
 
-const ExpenseDashboardPage = () => (
+const Dashboard = () => (
     <div>
         <Summary />
         <Filters />
@@ -11,4 +11,4 @@ const ExpenseDashboardPage = () => (
     </div>
 );
 
-export default ExpenseDashboardPage;
+export default Dashboard;

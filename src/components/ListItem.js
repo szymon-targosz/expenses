@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const ListItem = ({ description, note, amount, createdAt}) => (
-    <div>
+const ListItem = ({ description, note, amount, createdAt, id }) => (
+    <Link to={`/edit/${id}`}>
         <h3>{description}</h3>
         <p>{amount} - {createdAt}</p>
-    </div>
+    </Link>
 );
 
 export default ListItem;
