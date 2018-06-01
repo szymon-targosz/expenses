@@ -64,7 +64,7 @@ export class Filters extends React.Component {
     }
 }
 
-const mapPropsToState = state => ({
+const mapStateToProps = state => ({
     filters: state.filters
 });
 
@@ -76,4 +76,4 @@ const mapDispatchToProps = dispatch => ({
     setEndDate: (endDate) => dispatch(setEndDate(endDate)),
 });
 
-export default connect(mapPropsToState, mapDispatchToProps)(Filters);
+export default connect(mapStateToProps, mapDispatchToProps)(Filters);

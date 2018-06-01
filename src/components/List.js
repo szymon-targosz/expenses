@@ -1,6 +1,7 @@
 import React from 'react';
 import ListItem from './ListItem';
 import { connect } from 'react-redux';
+import selectExpenses from '../selectors/expensesWithFilters';
 
 export const List = (props) => (
     <div>
@@ -13,7 +14,7 @@ export const List = (props) => (
 );
 
 const mapStateToProps = (state) => ({
-    expenses: state.expenses
+    expenses: selectExpenses(state.expenses, state.filters)
 });
 
 export default connect(mapStateToProps)(List);
