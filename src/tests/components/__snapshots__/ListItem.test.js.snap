@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ListItem correctly 1`] = `
+<Link
+  replace={false}
+  to="/edit/2"
+>
+  <h3>
+    Gas bill
+  </h3>
+  <p>
+    3590
+     - 
+    -172800000
+  </p>
+</Link>
+`;
