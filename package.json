@@ -7,7 +7,7 @@
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
-    "test": "jest --config=jest.config.json --watch"
+    "test": "cross-env NODE_ENV=test jest --config=jest.config.json --watch"
   },
   "dependencies": {
     "babel-cli": "6.26.0",
@@ -41,10 +41,13 @@
     "webpack": "4.9.1"
   },
   "devDependencies": {
+    "cross-env": "5.1.6",
+    "dotenv": "6.0.0",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
     "enzyme-to-json": "3.3.4",
     "jest": "23.1.0",
+    "redux-mock-store": "1.5.1",
     "webpack-cli": "2.1.4",
     "webpack-dev-server": "3.1.4"
   }
