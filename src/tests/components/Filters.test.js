@@ -7,9 +7,9 @@ import moment from 'moment';
 let setStartDate, setEndDate, setTextFilter, sortByAmount, sortByDate, wrapper;
 beforeEach(() => {
     setStartDate = jest.fn();
+    setEndDate = jest.fn();
     sortByAmount = jest.fn();
     sortByDate = jest.fn();
-    setEndDate = jest.fn();
     setTextFilter = jest.fn();
     wrapper = shallow(
         <Filters 

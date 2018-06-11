@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Login component correctly 1`] = `
+<div>
+  <h1>
+    Expensify
+  </h1>
+  <p>
+    It's time to get your expenses under control
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Login with Google
+  </button>
+</div>
+`;

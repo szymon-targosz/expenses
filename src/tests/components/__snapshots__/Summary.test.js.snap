@@ -14,6 +14,13 @@ exports[`should correctly render Summary with multiple expenses 1`] = `
       1234
     </span>
   </h1>
+  <Link
+    className="button"
+    replace={false}
+    to="/create"
+  >
+    Add Expense
+  </Link>
 </div>
 `;
 
@@ -31,5 +38,12 @@ exports[`should correctly render Summary with one expense 1`] = `
       100
     </span>
   </h1>
+  <Link
+    className="button"
+    replace={false}
+    to="/create"
+  >
+    Add Expense
+  </Link>
 </div>
 `;

@@ -2,7 +2,7 @@
 
 exports[`should render EditExpense correctly 1`] = `
 <div>
-  EditExpense page!
+  EditExpense
   <Form
     expense={
       Object {

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { startLogout } from '../actions/auth';
 import { connect } from 'react-redux';
 
-const Header = ({ startLogout }) => (
+export const Header = ({ startLogout }) => (
     <header>
         <Link to='/dashboard'>
             <h1>Expensify</h1>
