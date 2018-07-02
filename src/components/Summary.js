@@ -10,7 +10,7 @@ export const Summary = ({ expensesSum, expensesCount }) => {
     return (
         <div>
             <h1>Viewing <span>{expensesCount}</span> {matchingWord} totalling <span>{numeral(expensesSum / 100).format('$0,0.00')}</span></h1>
-            <Link className='button' to='/create'>Add Expense</Link>
+            <Link to='/create'>Add Expense</Link>
         </div>
     );
 };
