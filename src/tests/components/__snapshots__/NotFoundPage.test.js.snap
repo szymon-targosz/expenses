@@ -1,9 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render NotFoundPage correctly 1`] = `
-<div>
-  404! 
+<div
+  className="not-found"
+>
+  <div>
+    PAGE 
+    <span>
+      NOT
+    </span>
+     FOUND
+  </div>
+  <div
+    className="not-found__error"
+  >
+    404
+  </div>
   <Link
+    className="button"
     replace={false}
     to="/"
   >

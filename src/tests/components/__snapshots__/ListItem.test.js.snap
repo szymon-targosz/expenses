@@ -2,16 +2,26 @@
 
 exports[`should render ListItem correctly 1`] = `
 <Link
+  className="list-item"
   replace={false}
   to="/edit/2"
 >
-  <h3>
-    Gas bill
+  <div>
+    <h3
+      className="list-item__title"
+    >
+      Gas bill
+    </h3>
+    <span
+      className="list-item__subtitle"
+    >
+      December 30th, 1969
+    </span>
+  </div>
+  <h3
+    className="list-item__data"
+  >
+    $35.90
   </h3>
-  <p>
-    3590
-     - 
-    -172800000
-  </p>
 </Link>
 `;

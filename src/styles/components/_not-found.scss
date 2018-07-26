@@ -1,0 +1,26 @@
+.not-found {
+    align-items: center;
+    background: $dark-grey;
+    color: $grey;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+    font-size: 2rem;
+    @media (min-width: $desktop-breakpoint) {
+        font-size: 3rem;
+    }
+    span {
+        color: $blue;
+    }
+}
+
+.not-found__error {
+    font-size: 12rem;
+    font-weight: 900;
+    @media (min-width: $desktop-breakpoint) {
+        font-size: 20rem;
+    }
+    line-height: 1.25;
+}

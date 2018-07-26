@@ -8,8 +8,16 @@
     font-weight: 300;
     padding: $s-size;
     text-decoration: none;
+    transition: .3s ease-in-out;
+    &:hover {
+        background: #0a669d;
+    }
 }
 
 .button--link {
     background: none;
+    &:hover {
+        color: #E6E6E6;
+        background: none;
+    }
 }

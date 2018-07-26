@@ -14,3 +14,10 @@
 .select {
     @extend .text-input;
 }
+
+.text-input, .textarea, .select {
+    outline: none;
+    &:focus {
+        border: 1px solid  $blue;
+    }
+}
