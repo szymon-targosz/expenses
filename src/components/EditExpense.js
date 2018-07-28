@@ -1,9 +1,15 @@
 import React from 'react';
 import Form from './Form';
+import Modal from 'react-modal';
 import { connect } from 'react-redux';
 import { startEditExpense, startRemoveExpense } from '../actions/expenses';
 
 export class EditExpense extends React.Component {
+
+    state = {
+        isOpen: false
+    };
+
     onSubmit = expense => {
         this.props.startEditExpense(this.props.expense.id, expense);
         this.props.history.push('/dashboard');
@@ -11,8 +17,17 @@ export class EditExpense extends React.Component {
 
     onRemove = () => {
         this.props.startRemoveExpense(this.props.expense.id);
+        this.closeApproval();
         this.props.history.push('/dashboard');
     };
+
+    openApproval = () => {
+        this.setState(() => ({ isOpen: true }));
+    }
+
+    closeApproval = () => {
+        this.setState(() => ({ isOpen: false }));
+    }
 
     render() {
         return (
@@ -24,7 +39,18 @@ export class EditExpense extends React.Component {
                 </div>
                 <div className='content-container'>
                     <Form onSubmit={this.onSubmit} expense={this.props.expense} />
-                    <button className='button' onClick={this.onRemove}>Remove Expense</button>
+                    <button className='button' onClick={this.openApproval}>Remove Expense</button>
+                    <Modal
+                        ariaHideApp={false}
+                        contentLabel='Confirmation of removal'
+                        closeTimeoutMS={250}
+                        isOpen={this.state.isOpen}
+                        onRequestClose={this.closeApproval}
+                        className='modal'
+                    >
+                        <h4 className='modal__title'>Are you sure you want to delete this expense?</h4>
+                        <button className='button button--remove' onClick={this.onRemove}>Yes, remove it</button>
+                    </Modal>
                 </div>
             </div>
         );

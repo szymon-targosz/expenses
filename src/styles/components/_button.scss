@@ -21,3 +21,10 @@
         background: none;
     }
 }
+
+.button--remove {
+    background: #FF0000;
+    &:hover {
+        background: #DD0000;
+    }
+}
