@@ -23,11 +23,11 @@ export class EditExpense extends React.Component {
 
     openApproval = () => {
         this.setState(() => ({ isOpen: true }));
-    }
+    };
 
     closeApproval = () => {
         this.setState(() => ({ isOpen: false }));
-    }
+    };
 
     render() {
         return (

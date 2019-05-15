@@ -24,7 +24,7 @@ test('should render EditExpense correctly', () => {
 });
 
 test('should handle onRemove', () => {
-    wrapper.find('button').simulate('click');
+    wrapper.find('button').at(1).simulate('click');
     expect(startRemoveExpense).toHaveBeenLastCalledWith(expenses[0].id);
     expect(history.push).toHaveBeenLastCalledWith('/dashboard');
 });

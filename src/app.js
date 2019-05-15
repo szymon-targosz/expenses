@@ -28,7 +28,7 @@ const renderApp = () => {
     if (!hasRendered) {
         ReactDOM.render(jsx, document.getElementById('app'));
         hasRendered = true;
-    };
+    }
 };
 
 firebase.auth().onAuthStateChanged((user) => {
@@ -44,5 +44,5 @@ firebase.auth().onAuthStateChanged((user) => {
         store.dispatch(logout());
         renderApp();
         history.push('/');
-    };
+    }
 });
